@@ -15,4 +15,7 @@ RUN yum install -y which \
 RUN yum install -y ansible && yum clean all
 
 COPY resources/entrypoint.sh /entrypoint.sh
+
+RUN chmod 777 /entrypoint.sh
+
 ENTRYPOINT ["/entrypoint.sh"]
